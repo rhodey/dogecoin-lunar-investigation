@@ -1,0 +1,6 @@
+lib/download.js
+remote.sh
+dist/
+node_modules/
+package-lock.json
+*\.swp

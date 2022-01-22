@@ -1,0 +1,38 @@
+{
+  "name": "dogecoin-lunar-investigation",
+  "version": "0.0.1",
+  "description": "Quantify the Moon's association with Dogecoin, Bitcoin, and Ethereum.",
+  "homepage": "https://github.com/rhodey/dogecoin-lunar-investigation",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rhodey/dogecoin-lunar-investigation.git"
+  },
+  "scripts" : {
+    "build": "mkdir -p dist/ && ./build.sh",
+    "publish": "rsync -va dist/* nuc@vpn.rhodey:~/calendar",
+    "download-doge": "node lib/download.js DOGE > assets/months-doge.csv",
+    "download-btc": "node lib/download.js BTC > assets/months-btc.csv",
+    "download-eth": "node lib/download.js ETH > assets/months-eth.csv",
+    "historic": "node lib/historic.js",
+    "forecast": "node lib/forecast.js",
+    "moons": "node lib/moons.js",
+    "dates": "node lib/dates.js",
+    "days": "node lib/days.js"
+  },
+  "dependencies": {
+    "webdriverio": "^7.16.13",
+    "minimist": "^1.2.0",
+    "split": "^1.0.1",
+    "astronomy-engine": "^2.0.10",
+    "ephemeris": "^2.0.0",
+    "day-of-week": "^1.0.4"
+  },
+  "devDependencies": { },
+  "keywords": [
+    "dogecoin-lunar-investigation",
+    "dogecoin-lunar",
+    "dogecoin",
+    "lunar",
+    "investigation"
+  ]
+}
